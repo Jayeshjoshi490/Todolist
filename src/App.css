@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.app{
+    position: relative;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appContainer{
+    width:350px;
+    height: 500px;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 25px;
+    overflow: hidden;
+    border-radius: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+    width:340px;
+    margin: auto;
+    height: 72%;
+    overflow-y:auto;
+    scroll-behavior: smooth;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container::-webkit-scrollbar {
+    display: none;
 }
-
-.App-link {
-  color: #61dafb;
+h1{
+    text-align: center ;
+    margin-bottom: 25px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form , .ItemContainer{
+    border-radius: 25px;
+    background-color: orange;
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+input[type ="text"] , .ItemContent{
+    width:85%;
+    padding: 0px 6px;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    display:inline-block;
+    color: white;
+}
+input[type="button"] , .deleteButton{
+    width: 15%;
+    height: 48px;
+    padding: 6px;
+    border:none;
+    outline: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    background-color: black;
+    color:  orange;
+}
+.ItemContainer{
+    background-color: rgba(255, 255, 255, 0.8)!important;
+    color: black;
+    margin-top: 8px;
+}
+.ItemContent{
+    color: black;
+    line-height: 48px;
+    padding: 0px 10px;
+}
+.deleteButton{
+    display: none;
+    z-index: 999;
+}
+.ItemContainer:hover .deleteButton{
+    display: inline-block;
+    background-color: red;
+    color: black;
 }
